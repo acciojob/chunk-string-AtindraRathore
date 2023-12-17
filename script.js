@@ -1,13 +1,18 @@
 function stringChop(str, size) {
-  // your code here
-	let part1 = str.substring(0,size);
- 	let part2 = str.substring(size+1,str.length-size-3);
- 	let subpart1 = part2.substring(0,(size/2)+3);
- 	let subpart2 = part2.substring((size/2)+3,part2.length);
+   if (inputString === null) {
+    return [];
+  }
 
-   let arr[ part1, subpart1,subpart2 ];
-	return arr;
-	
+  // Initialize an empty array to store the chunks
+  const result = [];
+
+  // Loop through the input string and create chunks
+  for (let i = 0; i < inputString.length; i += chunkLength) {
+    const chunk = str.substr(i, chunkLength);
+    result.push(chunk);
+  }
+
+  return result;
 }
 
 // Do not change the code below
